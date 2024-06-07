@@ -74,7 +74,6 @@ interface HeaderProps {
 export default function Header ({ pathname, children }: HeaderProps): React.ReactElement {
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme, systemTheme } = useTheme();
-  console.log(theme);
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
   const switchTheme = () => {
