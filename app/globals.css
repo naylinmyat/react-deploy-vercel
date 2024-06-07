@@ -1,0 +1,86 @@
+@import url('./fontFace.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-lightblue bg-primary;
+  }
+}
+
+input[type='checkbox'] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 1.2em;
+  height: 1.2em;
+  /* border-radius: 0.15em; */
+  /* margin-right: 0.5em; */
+  border: 0.15em solid #edb92b;
+  /* outline: none; */
+  /* cursor: pointer; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:checked::before {
+  content: '\2714';
+  font-size: 1em;
+  color: #edb92b;
+}
+
+input:checked {
+  background-color: #292d53;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  background: transparent;
+  font-family: 'Arvo', serif;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000000 !important;
+  font-size: 1.2rem !important;
+}
+
+@font-face {
+  font-family: 'GoldmanBold';
+  src: local('GoldmanBold'), url('/fonts/KHN/MyanmarSquareLight_volt.ttf') format('truetype');
+  font-weight: bold;
+}
+
+.font-local {
+  font-family: 'GoldmanBold';
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
